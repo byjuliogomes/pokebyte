@@ -1,0 +1,26 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #EF5350;
+    color: whitesmoke;
+}
+
+.container {
+    background-color: silver;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.item{
+    background-color: black;
+    color: #ffff;
+    padding: 20px;
+    margin: 5px;
+    width: 30px;
+}

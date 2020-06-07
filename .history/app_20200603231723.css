@@ -1,0 +1,20 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #EF5350;
+    color: whitesmoke;
+}
+
+.container {
+    background-color: silver;
+    height: 250px;
+}
+
+.item{
+    background-color: black;
+    color: #ffff;
+    padding: 20px;
+    margin: 5px;
+}

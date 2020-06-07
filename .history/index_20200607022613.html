@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokebyte</title>
+    
+    
+    <link rel="stylesheet" href="app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+    <div class="slider__warpper">
+        
+        <div class="flex__container flex--pikachu flex--active" data-slide="1">
+          <div class="flex__item flex__item--left">
+            <div class="flex__content">
+                <header>
+                    <div>
+                        <img class="brand-logo center" src="/img/logo.svg">
+                   </div>
+                </header>
+                
+                <div class="box">
+                    <div class="container-1">
+                        <div class="row">
+                            <div class="col s12">
+                              <div class="row">
+                                <div class="input-field col s12">
+                                  <input type="text" id="autocomplete-input" class="autocomplete">
+                                  <label for="autocomplete-input" class="placeholder">Digite o nome de um pokemon</label>
+                                  <button class="waves-effect waves-light btn" onclick="selecionarPokemon()">Quem é este Pokémon?</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        
+                    </div>
+                    </div>
+              <p class="text--sub" id="tipoPokemon">ELECTRIC</p>
+              <h1 class="text--big" id="nomePokemon">Pikachu</h1>
+              <p class="text--normal">Pikachu is an Electric-type Pokémon introduced in Generation I. Pikachu are small, chubby, and incredibly cute mouse-like Pokémon. They are almost completely covered by yellow fur.</p>
+              <p class="tituloHabilidade">Habilidades:</p>
+              <ul id="listaHabilidades">
+                static </br>
+
+                lightning-rod
+              </ul>
+            </div>
+            
+            <!-- <p class="text__background">Pikachu</p> -->
+          </div>
+          <div class="flex__item flex__item--right"></div>
+          <img class="pokemon__img" id="pokeImage" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" />
+          <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col s6 m6 l6">
+                        <p>Criado por <a href="https://www.linkedin.com/in/juliocgs/" target="_blank"> Júlio Cesar Gomes</a></p>
+                        
+                        </div>
+            <div class="col s6 m6 l6">
+                <p><a href="#"><img class="logo_abyte" src="/img/logo-arbyte.png"></a></p>
+            </div>
+                
+            </div>
+            </div>
+          </div>
+        </div>
+     
+      <script src="app.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>
