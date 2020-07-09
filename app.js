@@ -110,3 +110,17 @@ input.onkeypress = function (event) {
     document.getElementById("btnPesquisar").click();
   }
 };
+
+function salvaPokemon() {
+  var pokemonSalvo = { nome: "", tipos: [], habilidades: [] };
+  pokemonSalvo.nome = pokemon.name;
+  pokemon.types.forEach((tp, i) => {
+    let poderes = tp.type.name;
+    pokemonSalvo.tipos.push(poderes);
+  });
+  pokemon.abilities.forEach((ab, i) => {
+    let habilidade = ab.ability.name;
+    pokemonSalvo.habilidades.push(habilidade);
+  });
+  window.localStorage.setItem("salvaPokemon", JSON.stringify(pokemonSalvo));
+}

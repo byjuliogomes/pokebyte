@@ -89,6 +89,23 @@ body {
   margin: 0 1.77em;
 }
 
+.salvaPokemon {
+  position: fixed;
+  z-index: 999;
+  left: 0%;
+  right: 0%;
+  top: 50;
+}
+
+.salvaPokemon img {
+  width: 3em;
+  fill-opacity: 0.2;
+}
+
+.salvaPokemon img :hover {
+  src: url(./img/pokebola2.svg);
+}
+
 #tipoPokemon {
   letter-spacing: 10px;
   font-weight: bold;
