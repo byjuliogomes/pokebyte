@@ -83,6 +83,20 @@ function selecionarPokemon() {
       document.querySelector("#pokeImage").src = imagem;
       var tipos = response.data.types.map((t) => t.type.name);
       document.querySelector("#tipoPokemon").innerHTML = tipos.join(`, `);
+      descricao();
+    });
+}
+
+function descricao() {
+  axios
+    .get(`https://pokeapi.co/api/v2/pokemon/${input.value}`)
+    .then((resposta) => {
+      const pokemonBusca = resposta.data;
+      var url = pokemonBusca.species.url;
+      axios.get(url).then((resposta) => {
+        var descricaoDoPoke = resposta.data.flavor_text_entries[0].flavor_text;
+        document.getElementById("descricaoPokemon").innerHTML = descricaoDoPoke;
+      });
     });
 }
 
