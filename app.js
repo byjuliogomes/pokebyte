@@ -14,8 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
       poke_imagens[poke.name] = url;
     });
   });
-
-  // var instances = M.Autocomplete.init(elems, { data: poke_imagens });
 });
 
 function selecionarPokemon() {
@@ -36,8 +34,6 @@ function selecionarPokemon() {
       document.querySelector("#tipoPokemon").innerHTML = tipos.join(`, `);
     });
 }
-
-// var elems = document.querySelectorAll(".autocomplete");
 
 // função javascript ao pressionar a tecla Enter na caixa de texto
 var input = document.getElementById("autocomplete-input");
@@ -100,8 +96,6 @@ function descricao() {
     });
 }
 
-// var elems = document.querySelectorAll(".autocomplete");
-
 // função javascript ao pressionar a tecla Enter na caixa de texto
 var input = document.getElementById("autocomplete-input");
 input.onkeypress = function (event) {
@@ -110,17 +104,3 @@ input.onkeypress = function (event) {
     document.getElementById("btnPesquisar").click();
   }
 };
-
-function salvaPokemon() {
-  var pokemonSalvo = { nome: "", tipos: [], habilidades: [] };
-  pokemonSalvo.nome = pokemon.name;
-  pokemon.types.forEach((tp, i) => {
-    let poderes = tp.type.name;
-    pokemonSalvo.tipos.push(poderes);
-  });
-  pokemon.abilities.forEach((ab, i) => {
-    let habilidade = ab.ability.name;
-    pokemonSalvo.habilidades.push(habilidade);
-  });
-  window.localStorage.setItem("salvaPokemon", JSON.stringify(pokemonSalvo));
-}

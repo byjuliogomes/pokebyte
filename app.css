@@ -99,13 +99,7 @@ body {
 
 .salvaPokemon img {
   width: 3em;
-  fill-opacity: 0.2;
 }
-
-.salvaPokemon img :hover {
-  src: url(./img/pokebola2.svg);
-}
-
 #tipoPokemon {
   letter-spacing: 10px;
   font-weight: bold;
