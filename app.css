@@ -82,6 +82,7 @@ body {
 .button {
   width: 3.927em;
   background-color: #ffcd28;
+  cursor: pointer;
 }
 
 .containerPokemon {
