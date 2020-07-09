@@ -33,14 +33,14 @@
     <div class="wrapper">
       <div class="headermain">
         <header class="header">
-            <div class="containerHeader"><link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+            <div class="containerHeader">
                 <img class="brand-logo" src="./img/logo.svg">
             </div>
         </header>
 
         <div class="main">
           <div class="input">
-            <input id="autocomplete-input" class="autocomplete" placeholder="Digite o nome de um Pokemon">
+            <input type="text" id="autocomplete-input" class="autocomplete" placeholder="Digite o nome de um Pokemon">
             <button class="button" id="btnPesquisar" image="/img/" onclick="selecionarPokemon()"> <img src="./img/search.svg"/></button>
           </div>
 
@@ -81,7 +81,5 @@
 
       <script src="app.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch.umd.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
 </body>
 </html>
