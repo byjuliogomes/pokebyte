@@ -4,7 +4,8 @@ var pokemons;
 var poke_imagens = {};
 
 document.addEventListener("DOMContentLoaded", function () {
-  axios.get("https://pokeapi.co/api/v2/pokemon?limit=251").then((response) => {
+  axios.get("https://pokeapi.co/api/v2/pokemon?limit=251")
+  .then((response) => {
     var pokemons = response.data.results;
     pokemons.forEach((poke) => {
       var split = poke.url.split("/");
@@ -40,3 +41,11 @@ function selecionarPokemon() {
 
     });
 }
+
+var input = document.getElementById("myInput");
+input.addEventListener("keydown", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+        document.getElementById("btnPesquisar").click();
+    }
+});
