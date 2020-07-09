@@ -1,11 +1,8 @@
-
-
 var pokemons;
 var poke_imagens = {};
 
 document.addEventListener("DOMContentLoaded", function () {
-  axios.get("https://pokeapi.co/api/v2/pokemon?limit=251")
-  .then((response) => {
+  axios.get("https://pokeapi.co/api/v2/pokemon?limit=251").then((response) => {
     var pokemons = response.data.results;
     pokemons.forEach((poke) => {
       var split = poke.url.split("/");
@@ -16,10 +13,9 @@ document.addEventListener("DOMContentLoaded", function () {
         ".png";
       poke_imagens[poke.name] = url;
     });
-    console.log(poke_imagens);
   });
-  var elems = document.querySelectorAll(".autocomplete");
-  var instances = M.Autocomplete.init(elems, { data: poke_imagens });
+
+  // var instances = M.Autocomplete.init(elems, { data: poke_imagens });
 });
 
 function selecionarPokemon() {
@@ -36,16 +32,18 @@ function selecionarPokemon() {
       lista.innerHTML = habilidades.join("");
       var imagem = poke_imagens[pokemon];
       document.querySelector("#pokeImage").src = imagem;
-      var tipos = response.data.types.map(t => t.type.name);
+      var tipos = response.data.types.map((t) => t.type.name);
       document.querySelector("#tipoPokemon").innerHTML = tipos.join(`, `);
-
     });
 }
 
-var input = document.getElementById("myInput");
-input.addEventListener("keydown", function(event) {
-    // Number 13 is the "Enter" key on the keyboard
-    if (event.keyCode === 13) {
-        document.getElementById("btnPesquisar").click();
-    }
-});
+// var elems = document.querySelectorAll(".autocomplete");
+
+// função javascript ao pressionar a tecla Enter na caixa de texto
+var input = document.getElementById("autocomplete-input");
+input.onkeypress = function (event) {
+  // O número 13 é a tecla "Enter" no teclado
+  if (event.which === 13 || event.keyCode === 13) {
+    document.getElementById("btnPesquisar").click();
+  }
+};
